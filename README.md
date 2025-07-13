@@ -4,6 +4,12 @@ A beginner-friendly and responsive web application that allows users to search f
 
 ---
 
+🍽️ Overview:
+
+The Recipe Finder Web App is a responsive and interactive web application that allows users to search for recipes based on ingredients, keywords, or meal types. Built using core web technologies — HTML, CSS, and JavaScript — it connects to a third-party recipe API (like Edamam or TheMealDB) to fetch real-time recipe data and display cooking instructions, images, ingredients, and more.
+
+---
+
 ## 📌 Features
 
 * 🔍 Search for recipes using keywords (e.g., "chicken", "pasta", "salad")
