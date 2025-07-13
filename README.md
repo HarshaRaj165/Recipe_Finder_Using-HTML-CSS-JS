@@ -17,6 +17,9 @@ A beginner-friendly and responsive web application that allows users to search f
 
 >![image alt](https://github.com/HarshaRaj165/Recipe_Finder_Using-HTML-CSS-JS/blob/220ec763954abe34b3188d7f0d460026898225d9/Images/Screenshot%202025-07-13%20152851.png)
 
+If we Open any Recipe, it displays as
+
+>![image alt]()
 ---
 
 ## 🛠️ Built With
