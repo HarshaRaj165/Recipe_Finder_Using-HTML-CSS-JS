@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavour Fusion</title>
+    <style>
+        body {
+            margin: 0 ;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(100deg, blue,white, pink);
+        
+        }
+        header {
+            background-color: #ff7043;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .recipe-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .recipe-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+        .recipe-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .recipe-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .view-recipe {
+            background-color: #ff7043;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .view-recipe:hover {
+            background-color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Flavour Fusion</h1>
+        <p>Find your next meal inspiration</p>
+    </header>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" onkeyup="searchRecipes()" placeholder="Search for recipes..." class="search-bar">
+        </div>
+
+        <div id="recipeList" class="recipe-list">
+            <div class="recipe-card">
+                <img src="img/Idli Sambar.jpeg" alt="Idli Sambar" class="recipe-image">
+                <div class="recipe-name">Idli Sambar</div>
+                <a href="Idli Sambar.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Masala Dosa.jpeg" alt="Masala Dosa" class="recipe-image">
+                <div class="recipe-name">Masala Dosa</div>
+                <a href="Masala Dosa.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Poori.jpeg" alt="Poori" class="recipe-image">
+                <div class="recipe-name">Poori</div>
+                <a href="Poori.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Uggani.jpeg" alt="Uggani" class="recipe-image">
+                <div class="recipe-name">Uggani</div>
+                <a href="Uggani.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Chapathi.jpg" alt="Chapathi" class="recipe-image">
+                <div class="recipe-name">Chapathi</div>
+                <a href="Chapathi.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Upma.jpeg" alt="Upma" class="recipe-image">
+                <div class="recipe-name">Upma</div>
+                <a href="Upma.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Spaghetti carbonara.jpeg" alt="Spaghetti Carbonara" class="recipe-image">
+                <div class="recipe-name">Spaghetti Carbonara</div>
+                <a href="Spaghetti Carbonara.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Chicken Alfredo.jpeg" alt="Chicken Alfredo" class="recipe-image">
+                <div class="recipe-name">Chicken Alfredo</div>
+                <a href="Chicken Alfredo.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Taco salad.jpeg" alt="Taco Salad" class="recipe-image">
+                <div class="recipe-name">Taco Salad</div>
+                <a href="Taco Salad.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Vegan Bhudda Bowl.jpeg" alt="Vegan Buddha Bowl" class="recipe-image">
+                <div class="recipe-name">Vegan Buddha Bowl</div>
+                <a href="Vegan Buddha Bowl.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Classsic Pancake.jpeg" alt="Classic Pancakes" class="recipe-image">
+                <div class="recipe-name">Classic Pancakes</div>
+                <a href="Classic Pancakes.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Beef Stir Fry.jpeg" alt="Beef Stir Fry" class="recipe-image">
+                <div class="recipe-name">Beef Stir Fry</div>
+                <a href="Beef Stir Fry.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Shrimp Scaampi.jpeg" alt="Shrimp Scampi" class="recipe-image">
+                <div class="recipe-name">Shrimp Scampi</div>
+                <a href="Shrimp Scamp.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Grilled Cheese Sandwich.jpeg" alt="Grilled Cheese Sandwich" class="recipe-image">
+                <div class="recipe-name">Grilled Cheese Sandwich</div>
+                <a href="Grilled Cheese Sandwich.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Marfgherita Pizza.jpeg" alt="Margherita Pizza" class="recipe-image">
+                <div class="recipe-name">Margherita Pizza</div>
+                <a href="Margherita Pizza.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Chicken Caesar Salad.jpeg" alt="Chicken Caesar Salad" class="recipe-image">
+                <div class="recipe-name">Chicken Caesar Salad</div>
+                <a href="Chicken Caesar Salad.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            
+            <div class="recipe-card">
+                <img src="img/Chicken Biryani.jpeg" alt="Chicken Biryani" class="recipe-image">
+                <div class="recipe-name">Chicken Biryani</div>
+                <a href="Chicken Biryani.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Mutton BIryani.jpeg" alt="Mutton Biryani" class="recipe-image">
+                <div class="recipe-name">Mutton Biryani</div>
+                <a href="Mutton Biryani.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Paneer Biryani.jpeg" alt="Paneer Biryani" class="recipe-image">
+                <div class="recipe-name">Paneer Biryani</div>
+                <a href="Paneer Biryani.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Mushroom Biryani.jpeg" alt="Mushroom Biryani" class="recipe-image">
+                <div class="recipe-name">Mushroom Biryani</div>
+                <a href="Mushroom BIryani.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Veg Fried Rice.jpeg" alt="Veg Fried Rice" class="recipe-image">
+                <div class="recipe-name">Veg Fried Rice</div>
+                <a href="Veg Fried Rice.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Egg Fried Rice.jpeg" alt="Egg Fried Rice" class="recipe-image">
+                <div class="recipe-name">Egg Fried Rice</div>
+                <a href="Egg Fried Rice.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Gobi Fried Rice.jpeg" alt="Gobi Fried Rice" class="recipe-image">
+                <div class="recipe-name">Gobi Fried Rice</div>
+                <a href="Gobi Fried Rice.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Lemon Rice.jpeg" alt="Lemon Rice" class="recipe-image">
+                <div class="recipe-name">Lemon Rice</div>
+                <a href="Lemon Rice.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Curd Rice.jpeg" alt="Curd Rice" class="recipe-image">
+                <div class="recipe-name">Curd Rice</div>
+                <a href="Curd Rice.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Panipuri.jpeg" alt="Panipuri" class="recipe-image">
+                <div class="recipe-name">Panipuri</div>
+                <a href="Panipuri.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Masalapuri.jpeg" alt="Masalapuri" class="recipe-image">
+                <div class="recipe-name">Masalapuri</div>
+                <a href="Masalapuri.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Cutlet.jpeg" alt="Cutlet" class="recipe-image">
+                <div class="recipe-name">Cutlet</div>
+                <a href="Cutlet.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/PavBhaji.jpeg" alt="PavBhaji" class="recipe-image">
+                <div class="recipe-name">PavBhaji</div>
+                <a href="PavBhaji.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Samosa.jpeg" alt="Samosa" class="recipe-image">
+                <div class="recipe-name">Samosa</div>
+                <a href="Samosa.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Popcorn.jpg" alt="Popcorn" class="recipe-image">
+                <div class="recipe-name">Popcorn</div>
+                <a href="Popcorn.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Sweetcorn.jpg" alt="Sweetcorn" class="recipe-image">
+                <div class="recipe-name">Sweetcorn</div>
+                <a href="Sweetcorn.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/French Fries.jpg" alt="Friench Fries" class="recipe-image">
+                <div class="recipe-name">French Fries</div>
+                <a href="French Fries.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Shawarma.jpg" alt="Shawarma" class="recipe-image">
+                <div class="recipe-name">Shawarma</div>
+                <a href="Shawarma.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="img/Momos.jpg" alt="Momos" class="recipe-image">
+                <div class="recipe-name">Momos</div>
+                <a href="Momos.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchRecipes() {
+            var input, filter, recipeList, recipeCards, recipeName, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toLowerCase();
+            recipeList = document.getElementById("recipeList");
+            recipeCards = recipeList.getElementsByClassName("recipe-card");
+
+            for (i = 0; i < recipeCards.length; i++) {
+                recipeName = recipeCards[i].getElementsByClassName("recipe-name")[0];
+                txtValue = recipeName.textContent || recipeName.innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    recipeCards[i].style.display = "";
+                } else {
+                    recipeCards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
