@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #ff7043;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .recipe-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .recipe-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+        .recipe-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .recipe-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .view-recipe {
+            background-color: #ff7043;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .view-recipe:hover {
+            background-color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Recipe Finder</h1>
+        <p>Find your next meal inspiration</p>
+    </header>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" onkeyup="searchRecipes()" placeholder="Search for recipes..." class="search-bar">
+        </div>
+
+        <div id="recipeList" class="recipe-list">
+            <div class="recipe-card">
+                <img src="img/Spaghetti carbonara.jpeg" alt="Spaghetti Carbonara" class="recipe-image">
+                <div class="recipe-name">Spaghetti Carbonara</div>
+                <a href="Spaghetti Carbonara.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/200x150" alt="Chicken Alfredo" class="recipe-image">
+                <div class="recipe-name">Chicken Alfredo</div>
+                <a href="Chicken Alfredo.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/200x150" alt="Taco Salad" class="recipe-image">
+                <div class="recipe-name">Taco Salad</div>
+                <a href="Taco Salad.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/200x150" alt="Vegan Buddha Bowl" class="recipe-image">
+                <div class="recipe-name">Vegan Buddha Bowl</div>
+                <a href="Vegan Buddha Bowl.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/200x150" alt="Classic Pancakes" class="recipe-image">
+                <div class="recipe-name">Classic Pancakes</div>
+                <a href="Classic Pancakes.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/200x150" alt="Beef Stir Fry" class="recipe-image">
+                <div class="recipe-name">Beef Stir Fry</div>
+                <a href="Beef Stir Fry.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/200x150" alt="Shrimp Scampi" class="recipe-image">
+                <div class="recipe-name">Shrimp Scampi</div>
+                <a href="Shrimp Scampi.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/200x150" alt="Grilled Cheese Sandwich" class="recipe-image">
+                <div class="recipe-name">Grilled Cheese Sandwich</div>
+                <a href="Grilled Cheese Sandwich.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/200x150" alt="Margherita Pizza" class="recipe-image">
+                <div class="recipe-name">Margherita Pizza</div>
+                <a href="Margherita Pizza.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/200x150" alt="Chicken Caesar Salad" class="recipe-image">
+                <div class="recipe-name">Chicken Caesar Salad</div>
+                <a href="Chicken Caesar Salad.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/200x150" alt="Chicken Caesar Salad" class="recipe-image">
+                <div class="recipe-name">Annam Pappu</div>
+                <a href="Chicken Caesar Salad.html">
+                <button class="view-recipe">View Recipe</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchRecipes() {
+            var input, filter, recipeList, recipeCards, recipeName, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toLowerCase();
+            recipeList = document.getElementById("recipeList");
+            recipeCards = recipeList.getElementsByClassName("recipe-card");
+
+            for (i = 0; i < recipeCards.length; i++) {
+                recipeName = recipeCards[i].getElementsByClassName("recipe-name")[0];
+                txtValue = recipeName.textContent || recipeName.innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    recipeCards[i].style.display = "";
+                } else {
+                    recipeCards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
